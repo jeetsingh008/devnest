@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import Experience from "./sections/Experience";
 import Hero from "./sections/Hero";
 import AppShowcase from "./sections/ShowcaseSection";
+import TechstackShow from "./sections/TechstackShow";
 
 const app = () => {
   return (
@@ -12,6 +13,7 @@ const app = () => {
       <AppShowcase />
       <LogoShowcase />
       <Experience />
+      <TechstackShow />
     </>
   );
 };
