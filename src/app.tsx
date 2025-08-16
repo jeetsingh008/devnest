@@ -1,11 +1,12 @@
+import Hero from "./sections/Hero";
+import AppShowcase from "./sections/ShowcaseSection";
+
 const app = () => {
   return (
-    <main>
-        <div>
-            <h1>welcome</h1>
-        </div>
-    </main>
-  )
-}
+    <div className="">
+      <Hero />
+    </div>
+  );
+};
 
-export default app
+export default app;
