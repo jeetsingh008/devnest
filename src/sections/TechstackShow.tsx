@@ -27,10 +27,10 @@ const TechstackShow: React.FC = () => {
   ];
   const rightGlowColors = [
     "#ffff00", // Yellow (Python)
-    "#e0ffff", // Light Cyan (React Native)
-    "#d3d3d3", // Light Gray (Nextjs)
-    "#B266FF", // Violet (Aws)
-    "#0000ff", // Blue (Postgresql)
+    "#00FFFF", // Light Cyan (React Native)
+    "#5A5A5A", // Light Gray (Nextjs)
+    "#0047AB", // Violet (Aws)
+    "#57B9FF", // Blue (Postgresql)
   ];
 
   // GSAP random glow animation
