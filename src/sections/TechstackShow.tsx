@@ -110,7 +110,7 @@ const TechstackShow: React.FC = () => {
               title={icon.name}
               className="w-12 h-12 object-contain"
             />
-            <span className="absolute bottom-[-30px] left-1/2 -translate-x-1/2 bg-gray-900 text-white text-sm font-medium px-2 py-1 rounded opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300">
+            <span className="absolute text-center bottom-[-30px] left-1/2 -translate-x-1/2 bg-gray-900 text-white text-sm font-medium px-2 py-1 rounded opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300">
               {icon.name}
             </span>
           </div>
@@ -135,7 +135,7 @@ const TechstackShow: React.FC = () => {
               title={icon.name}
               className="w-12 h-12 object-contain"
             />
-            <span className="absolute bottom-[-30px] left-1/2 -translate-x-1/2 bg-gray-900 text-white text-sm font-medium px-2 py-1 rounded opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300">
+            <span className="absolute text-center bottom-[-30px] left-1/2 -translate-x-1/2 bg-gray-900 text-white text-sm font-medium px-2 py-1 rounded opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300">
               {icon.name}
             </span>
           </div>
