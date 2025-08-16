@@ -254,9 +254,40 @@ section {
     @apply flex flex-col-reverse xl:flex-row xl:gap-20 gap-10 justify-between;
   }
 
-  .gradient-edge {
-    @apply w-36 h-full absolute bottom-0 z-20;
+  .marquee::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(1.5px 1.5px at 20% 30%, cyan, transparent),
+      radial-gradient(2px 2px at 80% 70%, cyan, transparent),
+      radial-gradient(1px 1px at 50% 50%, cyan, transparent),
+      radial-gradient(2px 2px at 10% 80%, cyan, transparent),
+      radial-gradient(1.5px 1.5px at 30% 60%, cyan, transparent),
+      radial-gradient(1px 1px at 70% 20%, cyan, transparent),
+      radial-gradient(2px 2px at 40% 90%, cyan, transparent),
+      radial-gradient(1.5px 1.5px at 90% 40%, cyan, transparent),
+      radial-gradient(1px 1px at 60% 10%, cyan, transparent),
+      radial-gradient(2px 2px at 75% 85%, cyan, transparent),
+      radial-gradient(1.2px 1.2px at 15% 50%, cyan, transparent),
+      radial-gradient(1.8px 1.8px at 45% 25%, cyan, transparent);
+    background-size: cover;
+    animation: twinkle 6s infinite alternate;
+    z-index: 0;
   }
+
+  @keyframes twinkle {
+    0% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Star effect */
 
   .tech-card-animated-bg {
     @apply absolute left-0 bottom-[-100%] w-full h-full bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
