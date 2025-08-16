@@ -62,7 +62,26 @@ export interface SocialImg {
   imgPath: string;
 }
 
+export interface TechStackIcons {
+  name: string;
+  imgPath: string;
+}
+
 // data
+
+const techStackIcons: TechStackIcons[] = [
+  { name: "react", imgPath: "/images/techIcons/react.svg" },
+  { name: "express js", imgPath: "/images/techIcons/express-js.svg" },
+  { name: "flutter", imgPath: "/images/techIcons/flutter.svg" },
+  { name: "mongo db", imgPath: "/images/techIcons/mongodb.svg" },
+  { name: "spring boot", imgPath: "/images/techIcons/spring-boot.svg" },
+  { name: "python", imgPath: "/images/techIcons/python.svg" },
+  { name: "react native", imgPath: "/images/techIcons/react-native.svg" },
+  { name: "next js", imgPath: "/images/techIcons/next-js.svg" },
+  { name: "aws", imgPath: "/images/techIcons/aws.svg" },
+  { name: "postgre sql", imgPath: "/images/techIcons/postgresql.svg" },
+];
+
 const navLinks: NavLink[] = [
   { name: "Work", link: "#work" },
   { name: "Experience", link: "#experience" },
@@ -128,38 +147,38 @@ const techStackImgs: TechStackImg[] = [
   { name: "Project Manager", imgPath: "/images/logos/git.svg" },
 ];
 
-const techStackIcons: TechStackIcon[] = [
-  {
-    name: "React Developer",
-    modelPath: "/models/react_logo-transformed.glb",
-    scale: 1,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Python Developer",
-    modelPath: "/models/python-transformed.glb",
-    scale: 0.8,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Backend Developer",
-    modelPath: "/models/node-transformed.glb",
-    scale: 5,
-    rotation: [0, -Math.PI / 2, 0],
-  },
-  {
-    name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Project Manager",
-    modelPath: "/models/git-svg-transformed.glb",
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
-  },
-];
+// const techStackIcons: TechStackIcon[] = [
+//   {
+//     name: "React Developer",
+//     modelPath: "/models/react_logo-transformed.glb",
+//     scale: 1,
+//     rotation: [0, 0, 0],
+//   },
+//   {
+//     name: "Python Developer",
+//     modelPath: "/models/python-transformed.glb",
+//     scale: 0.8,
+//     rotation: [0, 0, 0],
+//   },
+//   {
+//     name: "Backend Developer",
+//     modelPath: "/models/node-transformed.glb",
+//     scale: 5,
+//     rotation: [0, -Math.PI / 2, 0],
+//   },
+//   {
+//     name: "Interactive Developer",
+//     modelPath: "/models/three.js-transformed.glb",
+//     scale: 0.05,
+//     rotation: [0, 0, 0],
+//   },
+//   {
+//     name: "Project Manager",
+//     modelPath: "/models/git-svg-transformed.glb",
+//     scale: 0.05,
+//     rotation: [0, -Math.PI / 4, 0],
+//   },
+// ];
 
 const expCards: ExpCard[] = [
   {
