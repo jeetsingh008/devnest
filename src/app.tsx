@@ -1,5 +1,6 @@
 import LogoShowcase from "./components/LogoShowcase";
 import NavBar from "./components/NavBar";
+import Experience from "./sections/Experience";
 import Hero from "./sections/Hero";
 import AppShowcase from "./sections/ShowcaseSection";
 
@@ -10,6 +11,7 @@ const app = () => {
       <Hero />
       <AppShowcase />
       <LogoShowcase />
+      <Experience />
     </>
   );
 };
