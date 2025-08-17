@@ -66,7 +66,7 @@ const TechstackShow: React.FC = () => {
     // Animate center element
     if (centerRef.current) {
       gsap.to(centerRef.current, {
-        boxShadow: "0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 15px #00f0ff",
+        boxShadow: "0 0 5px #FF0000, 0 0 70px #FF0000, 0 0 15px #FF0000",
         duration: 1 + Math.random() * 1, // Random duration between 1-2s
         delay: Math.random() * 3, // Random delay between 0-0.5s
         yoyo: true,
@@ -86,7 +86,7 @@ const TechstackShow: React.FC = () => {
         {/* Center element */}
         <div
           ref={centerRef}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-cyan-400/20 fontbol rounded-full flex items-center justify-center"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-black fontbol rounded-full flex items-center justify-center"
         >
           DevNest
         </div>
