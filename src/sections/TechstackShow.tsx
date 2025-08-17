@@ -4,6 +4,7 @@ import React, { useRef, useEffect } from "react";
 import { AnimatedBeam } from "../components/magicui/animated-beam";
 import { techStackIcons } from "../constants";
 import gsap from "gsap";
+import { FlipText } from "../components/magicui/flip-text";
 
 const TechstackShow: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -81,7 +82,20 @@ const TechstackShow: React.FC = () => {
   const rightIcons = techStackIcons.slice(5, 10);
 
   return (
-    <section className="relative w-full h-[600px] flex justify-center items-center">
+    <section
+      id="techstack"
+      className="relative w-full h-[700px] mx-auto md:px-8 my-16 md:my-24 flex flex-col justify-center items-center"
+    >
+      <div className="flex flex-col text-center gap-2 mx-auto">
+        <h1 className="font-semibold font-sans text-center gap-2 md:text-4xl text-3xl">
+          Our Tech Stack
+        </h1>
+        <p className="flex items-center tracking-wider gap-2 text-sm md:text-lg xl:text-xl">
+          <span>Powered by </span>
+          <span className="text-cyan-300">industry-leading</span>
+          <span> technologies</span>
+        </p>
+      </div>
       <div ref={containerRef} className="relative w-full h-full">
         {/* Center element */}
         <div
