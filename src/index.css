@@ -501,3 +501,32 @@ section {
 .card:hover::before {
   opacity: 1;
 }
+
+/* Testimonial section */
+.testimonial-wrapper {
+  @apply w-full py-12 overflow-hidden bg-transparent;
+}
+
+.testimonial-box {
+  @apply max-w-5xl mx-auto border-y-[1px] bg-transparent border-cyan-700 rounded-4xl p-12 md:p-20 2xl:p-24 relative overflow-hidden;
+}
+
+.testimonial-container {
+  @apply flex gap-8 w-max;
+}
+
+.testimonial-card {
+  @apply bg-black border border-cyan-900 backdrop-blur-lg text-white p-6 rounded-xl min-w-[300px] max-w-[320px] flex-shrink-0 transition-transform duration-300 shadow-xl;
+}
+
+.testimonial-text {
+  @apply text-lg leading-6 mb-4;
+}
+
+.testimonial-name {
+  @apply font-semibold text-base mb-1;
+}
+
+.testimonial-role {
+  @apply text-sm opacity-80;
+}
