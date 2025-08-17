@@ -4,6 +4,7 @@ import React, { useRef, useEffect } from "react";
 import { AnimatedBeam } from "../components/magicui/animated-beam";
 import { techStackIcons } from "../constants";
 import gsap from "gsap";
+import { FlipText } from "../components/magicui/flip-text";
 
 const TechstackShow: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -66,7 +67,7 @@ const TechstackShow: React.FC = () => {
     // Animate center element
     if (centerRef.current) {
       gsap.to(centerRef.current, {
-        boxShadow: "0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 15px #00f0ff",
+        boxShadow: "0 0 5px #FF0000, 0 0 70px #FF0000, 0 0 15px #FF0000",
         duration: 1 + Math.random() * 1, // Random duration between 1-2s
         delay: Math.random() * 3, // Random delay between 0-0.5s
         yoyo: true,
@@ -81,12 +82,25 @@ const TechstackShow: React.FC = () => {
   const rightIcons = techStackIcons.slice(5, 10);
 
   return (
-    <section className="relative w-full h-[600px] flex justify-center items-center">
+    <section
+      id="techstack"
+      className="relative w-full h-[700px] mx-auto md:px-8 my-16 md:my-24 flex flex-col justify-center items-center"
+    >
+      <div className="flex flex-col text-center gap-2 mx-auto">
+        <h1 className="font-semibold font-sans text-center gap-2 md:text-4xl text-3xl">
+          Our Tech Stack
+        </h1>
+        <p className="flex items-center tracking-wider gap-2 text-sm md:text-lg xl:text-xl">
+          <span>Powered by </span>
+          <span className="text-cyan-300">industry-leading</span>
+          <span> technologies</span>
+        </p>
+      </div>
       <div ref={containerRef} className="relative w-full h-full">
         {/* Center element */}
         <div
           ref={centerRef}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-cyan-400/20 fontbol rounded-full flex items-center justify-center"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-black fontbol rounded-full flex items-center justify-center"
         >
           DevNest
         </div>
