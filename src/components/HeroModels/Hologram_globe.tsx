@@ -1,13 +1,13 @@
 import type { FC, JSX } from "react";
 import { useRef, useEffect } from "react";
-import { useGLTF, useAnimations } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import { Group, Color } from "three";
 
 type HologramGlobeProps = JSX.IntrinsicElements["group"];
 
 export const HologramGlobe: FC<HologramGlobeProps> = (props) => {
   const group = useRef<Group>(null);
-  const { nodes, materials, animations } = useGLTF(
+  const { nodes, materials } = useGLTF(
     "/models/hologram_globe.glb"
   ) as any;
   // const { actions } = useAnimations(animations, group);
