@@ -4,7 +4,6 @@ import React, { useRef, useEffect } from "react";
 import { AnimatedBeam } from "../components/magicui/animated-beam";
 import { techStackIcons } from "../constants";
 import gsap from "gsap";
-import { FlipText } from "../components/magicui/flip-text";
 
 const TechstackShow: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
