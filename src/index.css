@@ -516,7 +516,7 @@ section {
 }
 
 .testimonial-card {
-  @apply bg-black border border-cyan-900 backdrop-blur-lg text-white p-6 rounded-xl min-w-[300px] max-w-[320px] flex-shrink-0 transition-transform duration-300 shadow-xl;
+  @apply bg-black border border-cyan-900 text-white p-6 rounded-xl min-w-[300px] max-w-[320px] flex-shrink-0 transition-transform duration-300 shadow-xl;
 }
 
 .testimonial-text {

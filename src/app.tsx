@@ -2,6 +2,7 @@ import LogoShowcase from "./components/LogoShowcase";
 import NavBar from "./components/NavBar";
 import Contact from "./sections/Contact";
 import Experience from "./sections/Experience";
+import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import AppShowcase from "./sections/ShowcaseSection";
 import TechstackShow from "./sections/TechstackShow";
@@ -18,6 +19,7 @@ const app = () => {
       <TechstackShow />
       <InfiniteTestimonials />
       <Contact />
+      <Footer />
     </>
   );
 };
