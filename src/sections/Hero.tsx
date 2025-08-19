@@ -51,8 +51,8 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              I’m <span className="text-orange-400">Jeet</span>. I don’t just write code — I{" "}
-              <span className="text-orange-400">craft possibilities.</span>
+              I’m <span className="text-orange-500">Jeet</span>. I don’t just write code — {" "}
+              <span className="text-orange-500">I craft possibilities.</span>
             </p>
             <Button
               text="Get in touch"
