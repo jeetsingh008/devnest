@@ -30,9 +30,10 @@ const Hero = () => {
         <header className="flex flex-col justify-center md:w-full w-screen px-5 md:px-20">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
-              <h1>Where ideas</h1>
+              <h1 className="pb-4"></h1>
+              <h1>Forging ideas</h1>
               <h1>
-                hatch into
+                into
                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word, index) => (
@@ -40,7 +41,7 @@ const Hero = () => {
                         key={index}
                         className="flex items-center md:gap-3 gap-1 pb-2"
                       >
-                        <span>{word.text}</span>
+                        <span className="text-orange-400">{word.text}</span>
                       </span>
                     ))}
                   </span>
@@ -48,14 +49,15 @@ const Hero = () => {
               </h1>
               <h1>products</h1>
             </div>
+
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, i am adrian, a developer based in croatia with a passion for
-              code.
+              I’m <span className="text-orange-400">Jeet</span>. I don’t just write code — I{" "}
+              <span className="text-orange-400">craft possibilities.</span>
             </p>
             <Button
-              id="button"
-              className="md:w-80 md:h-16 w-60 h-12"
               text="Get in touch"
+              id="contact"
+              className="md:w-80 md:h-16 w-60 h-12"
             />
           </div>
         </header>

@@ -116,10 +116,10 @@ const words: Word[] = [
   { text: "smart" },
   { text: "reliable" },
   { text: "scalable" },
-  { text: "future-ready" },
+  { text: "user-friendly" },
   { text: "innovative" },
   { text: "impactful" },
-  { text: "world-class" },
+  { text: "future-ready" },
 ];
 
 const counterItems: CounterItem[] = [
