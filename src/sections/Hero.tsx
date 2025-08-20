@@ -30,8 +30,10 @@ const Hero = () => {
         <header className="flex flex-col justify-center md:w-full w-screen px-5 md:px-20">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
-              <h1 className="pb-4"></h1>
-              <h1>Forging ideas</h1>
+              <h1 className="text-3xl md:text-4xl xl:text-6xl text-orange-400">
+                Hi, i'm Jeet
+              </h1>
+              <h1>i forge ideas</h1>
               <h1>
                 into
                 <span className="slide">
@@ -51,7 +53,7 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              I’m <span className="text-orange-500">Jeet</span>. I don’t just write code — {" "}
+              I don’t just write code —{" "}
               <span className="text-orange-500">I craft possibilities.</span>
             </p>
             <Button
@@ -78,7 +80,7 @@ export default Hero;
 function BackgroundSnowParticles() {
   return (
     <div className="absolute inset-0 z-0 pointer-events-none">
-      {Array.from({ length: 100 }).map((_, i) => (
+      {Array.from({ length: 120 }).map((_, i) => (
         <div key={i} className="snow"></div>
       ))}
     </div>
