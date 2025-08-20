@@ -87,7 +87,7 @@ const TechstackShow: React.FC = () => {
     >
       <div className="flex flex-col text-center gap-2 mx-auto">
         <h1 className="font-semibold font-sans text-center gap-2 md:text-4xl text-3xl">
-          Our Tech Stack
+          My Tech Arsenal
         </h1>
         <p className="flex items-center tracking-wider gap-2 text-sm md:text-lg xl:text-xl">
           <span>Powered by </span>
