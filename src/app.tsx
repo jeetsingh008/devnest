@@ -1,4 +1,3 @@
-import LogoShowcase from "./components/LogoShowcase";
 import NavBar from "./components/NavBar";
 import Contact from "./sections/Contact";
 import Experience from "./sections/Experience";
@@ -14,7 +13,7 @@ const app = () => {
       <NavBar />
       <Hero />
       <AppShowcase />
-      <LogoShowcase />
+      {/* <LogoShowcase /> */}
       <Experience />
       <TechstackShow />
       <InfiniteTestimonials />
