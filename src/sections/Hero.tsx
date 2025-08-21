@@ -30,8 +30,8 @@ const Hero = () => {
         <header className="flex flex-col justify-center md:w-full w-screen px-5 md:px-20">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
-              <h1 className="text-3xl md:text-4xl xl:text-6xl text-orange-400">
-                Hi, i'm Jeet
+              <h1 className="text-3xl md:text-4xl xl:text-6xl ">
+                Hi, i'm <span className="text-cyan-400/90">Jeet</span>
               </h1>
               <h1>i forge ideas</h1>
               <h1>
@@ -43,7 +43,7 @@ const Hero = () => {
                         key={index}
                         className="flex items-center md:gap-3 gap-1 pb-2"
                       >
-                        <span className="text-orange-400">{word.text}</span>
+                        <span className="text-cyan-400/90">{word.text}</span>
                       </span>
                     ))}
                   </span>
@@ -53,8 +53,9 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              I don’t just write code —{" "}
-              <span className="text-orange-500">I craft possibilities.</span>
+              I'm a <span className="text-cyan-400">Full-Stack</span> Web
+              Developer crafting modern, <br /> responsive, and future-ready 
+              <span className="text-cyan-400"> web apps</span>.
             </p>
             <Button
               text="Get in touch"
