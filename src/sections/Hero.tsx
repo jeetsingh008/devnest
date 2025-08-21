@@ -53,8 +53,9 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              I don’t just write code —{" "}
-              <span className="text-cyan-500">I craft possibilities.</span>
+              I'm a <span className="text-cyan-400">Full-Stack</span> Web
+              Developer crafting modern, <br /> responsive, and future-ready 
+              <span className="text-cyan-400"> web apps</span>.
             </p>
             <Button
               text="Get in touch"
