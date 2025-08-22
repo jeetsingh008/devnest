@@ -33,7 +33,7 @@ const Hero = () => {
               <h1 className="text-3xl md:text-4xl xl:text-6xl ">
                 Hi, i'm <span className="text-cyan-400/90">Jeet</span>
               </h1>
-              <h1>i forge ideas</h1>
+              <h1>and i forge ideas</h1>
               <h1>
                 into
                 <span className="slide">
@@ -54,7 +54,7 @@ const Hero = () => {
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
               I'm a <span className="text-cyan-400">Full-Stack</span> Web
-              Developer crafting modern, <br /> responsive, and future-ready 
+              Developer crafting modern, <br /> responsive, and future-ready
               <span className="text-cyan-400"> web apps</span>.
             </p>
             <Button
@@ -66,11 +66,11 @@ const Hero = () => {
         </header>
 
         {/* RIGHT: 3D MODEL */}
-        <figure>
+        {/* <figure>
           <div className="hero-3d-layout">
             <HeroExperience />
           </div>
-        </figure>
+        </figure> */}
       </div>
     </section>
   );
