@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import HeroExperience from "../components/HeroModels/HeroExperience";
+// import HeroExperience from "../components/HeroModels/HeroExperience";
 import { words } from "../constants";
 import "./Snow.scss";
 import { useGSAP } from "@gsap/react";
