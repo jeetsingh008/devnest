@@ -1,4 +1,5 @@
 import NavBar from "./components/NavBar";
+import AboutMe from "./sections/AboutMe";
 import Contact from "./sections/Contact";
 // import Experience from "./sections/Experience";
 import Footer from "./sections/Footer";
@@ -14,7 +15,9 @@ const app = () => {
       {/* <Experience /> */}
       <NavBar />
       <Hero />
+      <AboutMe />
       <TechstackShow />
+
       <Contact />
       <Footer />
     </>
