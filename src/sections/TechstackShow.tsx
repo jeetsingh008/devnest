@@ -66,7 +66,7 @@ const TechstackShow: React.FC = () => {
     // Animate center element
     if (centerRef.current) {
       gsap.to(centerRef.current, {
-        boxShadow: "0 0 5px #FF0000, 0 0 70px #FF0000, 0 0 15px #FF0000",
+        boxShadow: "0 0 5px #23D5D5, 0 0 70px #23D5D5, 0 0 15px #23D5D5",
         duration: 1 + Math.random() * 1, // Random duration between 1-2s
         delay: Math.random() * 3, // Random delay between 0-0.5s
         yoyo: true,
@@ -90,9 +90,11 @@ const TechstackShow: React.FC = () => {
           My Tech Arsenal
         </h1>
         <p className="flex items-center tracking-wider gap-2 text-sm md:text-lg xl:text-xl">
-          <span>Powered by </span>
-          <span className="text-cyan-300">industry-leading</span>
-          <span> technologies</span>
+          <span>
+            <span className="text-cyan-400">Tools</span> and{" "}
+            <span className="text-cyan-400">technologies</span> I work with to
+            build seamless <span className="text-cyan-400">web apps</span>.
+          </span>
         </p>
       </div>
       <div ref={containerRef} className="relative w-full h-full">
@@ -101,7 +103,11 @@ const TechstackShow: React.FC = () => {
           ref={centerRef}
           className="absolute overflow-hidden left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-black fontbol rounded-full flex items-center justify-center"
         >
-          <img src="/images/avtar12.png" alt="My Avatar" className="object-cover" />
+          <img
+            src="/images/avtar12.png"
+            alt="My Avatar"
+            className="object-cover"
+          />
         </div>
 
         {/* Left elements */}
