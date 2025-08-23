@@ -92,16 +92,16 @@ const testimonials: Testimonial[] = [
 ];
 
 const techStackIcons: TechStackIcons[] = [
-  { name: "react", imgPath: "/images/techIcons/react.svg" },
-  { name: "express js", imgPath: "/images/techIcons/express-js.svg" },
-  { name: "flutter", imgPath: "/images/techIcons/flutter.svg" },
-  { name: "mongo db", imgPath: "/images/techIcons/mongodb.svg" },
-  { name: "spring boot", imgPath: "/images/techIcons/spring-boot.svg" },
-  { name: "python", imgPath: "/images/techIcons/python.svg" },
-  { name: "react native", imgPath: "/images/techIcons/react-native.svg" },
+  { name: "React JS", imgPath: "/images/techIcons/react.svg" },
+  { name: "Express JS", imgPath: "/images/techIcons/express-js.svg" },
+  { name: "Mongo DB", imgPath: "/images/techIcons/mongodb.svg" },
+  { name: "Javascript", imgPath: "/images/techIcons/java-script.png" },
+  { name: "Tailwind CSS", imgPath: "/images/techIcons/TailwindCSS.svg" },
+  { name: "Python", imgPath: "/images/techIcons/python.svg" },
   { name: "next js", imgPath: "/images/techIcons/next-js.svg" },
-  { name: "aws", imgPath: "/images/techIcons/aws.svg" },
-  { name: "postgre sql", imgPath: "/images/techIcons/postgresql.svg" },
+  { name: "Typescript", imgPath: "/images/techIcons/typescript.png" },
+  { name: "Firebase", imgPath: "/images/techIcons/Firebase.svg" },
+  { name: "Github", imgPath: "/images/techIcons/github.png" },
 ];
 
 const navLinks: NavLink[] = [
