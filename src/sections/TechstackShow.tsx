@@ -99,9 +99,9 @@ const TechstackShow: React.FC = () => {
         {/* Center element */}
         <div
           ref={centerRef}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-black fontbol rounded-full flex items-center justify-center"
+          className="absolute overflow-hidden left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-black fontbol rounded-full flex items-center justify-center"
         >
-          DevNest
+          <img src="/images/avtar12.png" alt="My Avatar" className="object-cover" />
         </div>
 
         {/* Left elements */}
