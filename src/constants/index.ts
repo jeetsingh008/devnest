@@ -1,272 +1,243 @@
-// types
+// ─── Types ───────────────────────────────────────────────────────────────────
+
 export interface NavLink {
-  name: string;
-  link: string;
-}
-
-export interface Word {
-  text: string;
-}
-
-export interface CounterItem {
-  value: number;
-  suffix: string;
+  id: string;
   label: string;
 }
 
-export interface LogoIcon {
-  imgPath: string;
-}
-
-export interface Ability {
-  imgPath: string;
+export interface Service {
+  icon: string;
   title: string;
-  desc: string;
+  description: string;
 }
 
-export interface TechStackImg {
-  name: string;
-  imgPath: string;
-}
-
-export interface TechStackIcon {
-  name: string;
-  modelPath: string;
-  scale: number;
-  rotation: [number, number, number];
-}
-
-export interface ExpCard {
-  review: string;
-  imgPath: string;
-  logoPath: string;
+export interface ProcessStep {
+  step: number;
   title: string;
-  date: string;
-  responsibilities: string[];
+  description: string;
 }
 
-export interface ExpLogo {
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  tags: string[];
+  image: string;
+}
+
+export interface TeamMember {
   name: string;
-  imgPath: string;
+  role: string;
+  bio: string;
+  avatar: string;
 }
 
-export interface SocialImg {
-  name: string;
-  imgPath: string;
-}
-
-export interface TechStackIcons {
-  name: string;
-  imgPath: string;
-}
-
-interface Testimonial {
+export interface Testimonial {
   name: string;
   role: string;
   text: string;
+  avatar: string;
 }
 
-// data
+export interface SocialLink {
+  name: string;
+  url: string;
+  icon: string;
+}
 
-const testimonials: Testimonial[] = [
-  {
-    name: "Alice Johnson",
-    role: "Founder @ StartupX",
-    text: "This service transformed our workflow and boosted productivity!",
-  },
-  {
-    name: "James Lee",
-    role: "Designer",
-    text: "The smoothest experience I've ever had. Highly recommended!",
-  },
-  {
-    name: "Sophia Chen",
-    role: "Developer",
-    text: "An absolute game-changer. The UI and performance are top-notch!",
-  },
-  {
-    name: "Michael Brown",
-    role: "Product Manager",
-    text: "Seamless, reliable, and incredibly powerful. Love it!",
-  },
+export interface FooterLink {
+  label: string;
+  href: string;
+}
+
+// ─── Data ────────────────────────────────────────────────────────────────────
+
+// Navigation links
+export const navLinks: NavLink[] = [
+  { id: "services", label: "Services" },
+  { id: "projects", label: "Projects" },
+  { id: "about", label: "About" },
+  { id: "contact", label: "Contact" },
 ];
 
-const techStackIcons: TechStackIcons[] = [
-  { name: "React JS", imgPath: "/images/techIcons/react.svg" },
-  { name: "Express JS", imgPath: "/images/techIcons/express-js.svg" },
-  { name: "Mongo DB", imgPath: "/images/techIcons/mongodb.svg" },
-  { name: "Javascript", imgPath: "/images/techIcons/java-script.png" },
-  { name: "Tailwind CSS", imgPath: "/images/techIcons/TailwindCSS.svg" },
-  { name: "Python", imgPath: "/images/techIcons/python.svg" },
-  { name: "next js", imgPath: "/images/techIcons/next-js.svg" },
-  { name: "Typescript", imgPath: "/images/techIcons/typescript.png" },
-  { name: "Firebase", imgPath: "/images/techIcons/Firebase.svg" },
-  { name: "Github", imgPath: "/images/techIcons/github.png" },
-];
-
-const navLinks: NavLink[] = [
-  { name: "Work", link: "#work" },
-  { name: "Experience", link: "#experience" },
-  { name: "Skills", link: "#skills" },
-  { name: "Testimonials", link: "#testimonials" },
-];
-
-const words: Word[] = [
-  { text: "creative" },
-  { text: "smart" },
-  { text: "reliable" },
-  { text: "scalable" },
-  { text: "user-friendly" },
-  { text: "innovative" },
-  { text: "impactful" },
-  { text: "future-ready" },
-];
-
-const counterItems: CounterItem[] = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
-];
-
-const logoIconsList: LogoIcon[] = [
-  { imgPath: "/images/logos/company-logo-1.png" },
-  { imgPath: "/images/logos/company-logo-2.png" },
-  { imgPath: "/images/logos/company-logo-3.png" },
-  { imgPath: "/images/logos/company-logo-4.png" },
-  { imgPath: "/images/logos/company-logo-5.png" },
-  { imgPath: "/images/logos/company-logo-6.png" },
-  { imgPath: "/images/logos/company-logo-7.png" },
-  { imgPath: "/images/logos/company-logo-8.png" },
-  { imgPath: "/images/logos/company-logo-9.png" },
-  { imgPath: "/images/logos/company-logo-10.png" },
-  { imgPath: "/images/logos/company-logo-11.png" },
-];
-
-const abilities: Ability[] = [
-  {
-    imgPath: "/images/seo.png",
-    title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
-  },
-  {
-    imgPath: "/images/chat.png",
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
-  },
-  {
-    imgPath: "/images/time.png",
-    title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
-  },
-];
-
-const techStackImgs: TechStackImg[] = [
-  { name: "React Developer", imgPath: "/images/logos/react.png" },
-  { name: "Python Developer", imgPath: "/images/logos/python.svg" },
-  { name: "Backend Developer", imgPath: "/images/logos/node.png" },
-  { name: "Interactive Developer", imgPath: "/images/logos/three.png" },
-  { name: "Project Manager", imgPath: "/images/logos/git.svg" },
-];
-
-// const techStackIcons: TechStackIcon[] = [
-//   {
-//     name: "React Developer",
-//     modelPath: "/models/react_logo-transformed.glb",
-//     scale: 1,
-//     rotation: [0, 0, 0],
-//   },
-//   {
-//     name: "Python Developer",
-//     modelPath: "/models/python-transformed.glb",
-//     scale: 0.8,
-//     rotation: [0, 0, 0],
-//   },
-//   {
-//     name: "Backend Developer",
-//     modelPath: "/models/node-transformed.glb",
-//     scale: 5,
-//     rotation: [0, -Math.PI / 2, 0],
-//   },
-//   {
-//     name: "Interactive Developer",
-//     modelPath: "/models/three.js-transformed.glb",
-//     scale: 0.05,
-//     rotation: [0, 0, 0],
-//   },
-//   {
-//     name: "Project Manager",
-//     modelPath: "/models/git-svg-transformed.glb",
-//     scale: 0.05,
-//     rotation: [0, -Math.PI / 4, 0],
-//   },
-// ];
-
-const expCards: ExpCard[] = [
-  {
-    review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
-    responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
-    ],
-  },
-  {
-    review:
-      "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
-    responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
-    ],
-  },
-  {
-    review:
-      "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
-    responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
-    ],
-  },
-];
-
-const expLogos: ExpLogo[] = [
-  { name: "logo1", imgPath: "/images/logo1.png" },
-  { name: "logo2", imgPath: "/images/logo2.png" },
-  { name: "logo3", imgPath: "/images/logo3.png" },
-];
-
-const socialImgs: SocialImg[] = [
-  { name: "insta", imgPath: "/images/insta.png" },
-  { name: "fb", imgPath: "/images/fb.png" },
-  { name: "x", imgPath: "/images/x.png" },
-  { name: "linkedin", imgPath: "/images/linkedin.png" },
-];
-
-export {
-  words,
-  abilities,
-  logoIconsList,
-  counterItems,
-  expCards,
-  expLogos,
-  testimonials,
-  socialImgs,
-  techStackIcons,
-  techStackImgs,
-  navLinks,
+// Hero content
+export const heroContent = {
+  headline: "We Engineer Digital Experiences That Scale",
+  subtext:
+    "East Leviathans — a precision-focused dev studio specializing in full-stack web applications, AI-powered tools, and scalable SaaS platforms.",
+  cta1: "View Our Work",
+  cta2: "Start a Project",
 };
+
+// Services (6 items)
+export const services: Service[] = [
+  {
+    icon: "🌐",
+    title: "Web Applications",
+    description:
+      "Custom React, Next.js, and MERN stack applications built for performance and scale.",
+  },
+  {
+    icon: "🤖",
+    title: "AI Solutions",
+    description:
+      "Intelligent automation, chatbots, and ML-powered features integrated into your workflow.",
+  },
+  {
+    icon: "🚀",
+    title: "SaaS Platforms",
+    description:
+      "End-to-end SaaS development from MVP to production with subscription billing and analytics.",
+  },
+  {
+    icon: "📱",
+    title: "Mobile Apps",
+    description:
+      "Cross-platform mobile applications with React Native for iOS and Android.",
+  },
+  {
+    icon: "⚡",
+    title: "APIs & Integrations",
+    description:
+      "RESTful and GraphQL APIs, third-party integrations, and microservice architectures.",
+  },
+  {
+    icon: "🔧",
+    title: "Automation & Tools",
+    description:
+      "Custom scripts, browser extensions, and workflow automation to streamline operations.",
+  },
+];
+
+// Process steps (4 items)
+export const processSteps: ProcessStep[] = [
+  {
+    step: 1,
+    title: "Discovery",
+    description:
+      "We dive deep into your requirements, goals, and target audience to map the perfect solution.",
+  },
+  {
+    step: 2,
+    title: "Design",
+    description:
+      "Wireframes, prototypes, and UI/UX design that balances aesthetics with functionality.",
+  },
+  {
+    step: 3,
+    title: "Develop",
+    description:
+      "Clean, scalable code with modern frameworks, CI/CD pipelines, and rigorous testing.",
+  },
+  {
+    step: 4,
+    title: "Deploy",
+    description:
+      "Launch with confidence — optimized hosting, monitoring, and ongoing support.",
+  },
+];
+
+// Projects (placeholder - 4 items)
+export const projects: Project[] = [
+  {
+    id: 1,
+    title: "Project Alpha",
+    description:
+      "A full-stack SaaS platform for managing remote teams with real-time collaboration features.",
+    tags: ["React", "Node.js", "MongoDB", "WebSocket"],
+    image: "/images/placeholder-project.png",
+  },
+  {
+    id: 2,
+    title: "Project Beta",
+    description:
+      "AI-powered content generation tool with custom fine-tuned models and enterprise API.",
+    tags: ["Next.js", "Python", "OpenAI", "PostgreSQL"],
+    image: "/images/placeholder-project.png",
+  },
+  {
+    id: 3,
+    title: "Project Gamma",
+    description:
+      "E-commerce platform with advanced analytics dashboard and automated inventory management.",
+    tags: ["MERN Stack", "Stripe", "Redis", "Docker"],
+    image: "/images/placeholder-project.png",
+  },
+  {
+    id: 4,
+    title: "Project Delta",
+    description:
+      "Mobile-first fitness application with AI coaching and real-time progress tracking.",
+    tags: ["React Native", "Firebase", "TensorFlow", "Node.js"],
+    image: "/images/placeholder-project.png",
+  },
+];
+
+// Team members (placeholder - 2 items)
+export const teamMembers: TeamMember[] = [
+  {
+    name: "Member One",
+    role: "Full-Stack Developer & AI Engineer",
+    bio: "Specializes in building scalable web applications and integrating AI solutions that drive real business value.",
+    avatar: "/images/placeholder-avatar.png",
+  },
+  {
+    name: "Member Two",
+    role: "Full-Stack Developer & UI/UX Specialist",
+    bio: "Crafts pixel-perfect interfaces and robust backend systems with a keen eye for user experience.",
+    avatar: "/images/placeholder-avatar.png",
+  },
+];
+
+// Testimonials (placeholder - 3 items)
+export const testimonials: Testimonial[] = [
+  {
+    name: "Sarah Mitchell",
+    role: "CEO, TechStart Inc.",
+    text: "East Leviathans delivered beyond our expectations. Their attention to detail and technical expertise transformed our vision into a product our users love.",
+    avatar: "/images/placeholder-avatar.png",
+  },
+  {
+    name: "David Park",
+    role: "Founder, DataFlow",
+    text: "Working with EL was seamless. They understood our complex requirements and built a solution that scales effortlessly with our growing user base.",
+    avatar: "/images/placeholder-avatar.png",
+  },
+  {
+    name: "Emily Chen",
+    role: "CTO, NovaBridge",
+    text: "The team's ability to blend AI capabilities with clean, maintainable code is remarkable. They're our go-to development partners.",
+    avatar: "/images/placeholder-avatar.png",
+  },
+];
+
+// Tech stack icons for About section
+export const techStack: string[] = [
+  "React",
+  "Next.js",
+  "Node.js",
+  "TypeScript",
+  "Python",
+  "MongoDB",
+  "PostgreSQL",
+  "Firebase",
+  "Docker",
+  "AWS",
+  "TailwindCSS",
+  "GraphQL",
+];
+
+// Social links
+export const socialLinks: SocialLink[] = [
+  { name: "LinkedIn", url: "#", icon: "linkedin" },
+  { name: "GitHub", url: "#", icon: "github" },
+  { name: "Twitter", url: "#", icon: "twitter" },
+];
+
+// Footer data
+export const footerLinks: FooterLink[] = [
+  { label: "Services", href: "#services" },
+  { label: "Projects", href: "#projects" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
+];

@@ -1,89 +1,87 @@
-import Button from "../components/Button";
-import HeroExperience from "../components/HeroModels/HeroExperience";
-import { words } from "../constants";
-import "./Snow.scss";
-import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { heroContent } from "../constants";
 
 const Hero = () => {
-  useGSAP(() => {
-    gsap.fromTo(
-      ".hero-text h1",
-      {
-        y: 50,
+  const container = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+      tl.from(".hero-headline", {
+        y: 40,
         opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2,
         duration: 1,
-        ease: "power2.inOut",
-      }
-    );
-  });
+      })
+        .from(
+          ".hero-subtext",
+          {
+            y: 20,
+            opacity: 0,
+            duration: 0.8,
+          },
+          "-=0.5"
+        )
+        .from(
+          ".hero-cta",
+          {
+            y: 20,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.15,
+          },
+          "-=0.4"
+        );
+    },
+    { scope: container }
+  );
+
   return (
-    <section id="hero" className="relative overflow-hidden">
-      <BackgroundSnowParticles />
-      <div className="hero-layout">
-        {/* LEFT: HERO CONTENT */}
-        <header className="flex flex-col justify-center md:w-full w-screen px-5 md:px-20">
-          <div className="flex flex-col gap-7">
-            <div className="hero-text">
-              <h1 className="text-3xl md:text-4xl xl:text-6xl ">
-                Hi, i'm <span className="text-cyan-400/90">Jeet</span>
-              </h1>
-              <h1>and i forge ideas</h1>
-              <h1>
-                into
-                <span className="slide">
-                  <span className="wrapper">
-                    {words.map((word, index) => (
-                      <span
-                        key={index}
-                        className="flex items-center md:gap-3 gap-1 pb-2"
-                      >
-                        <span className="text-cyan-400/90">{word.text}</span>
-                      </span>
-                    ))}
-                  </span>
-                </span>
-              </h1>
-              <h1>products</h1>
-            </div>
+    <section
+      id="hero"
+      ref={container}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      {/* Background gradient orbs */}
+      <div
+        className="gradient-orb absolute top-1/4 -left-32 w-[500px] h-[500px] opacity-30"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(74,127,181,0.6) 0%, rgba(42,90,138,0.3) 50%, transparent 70%)",
+        }}
+      />
+      <div
+        className="gradient-orb absolute bottom-1/4 -right-32 w-[400px] h-[400px] opacity-20"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(107,163,214,0.5) 0%, rgba(74,127,181,0.2) 50%, transparent 70%)",
+        }}
+      />
 
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              I'm a <span className="text-cyan-400">Full-Stack</span> Web
-              Developer crafting modern, <br /> responsive, and future-ready
-              <span className="text-cyan-400"> web apps</span>.
-            </p>
-            <Button
-              text="Get in touch"
-              id="contact"
-              className="md:w-80 md:h-16 w-60 h-12"
-            />
-          </div>
-        </header>
-
-        {/* RIGHT: 3D MODEL */}
-        <figure>
-          <div className="hero-3d-layout">
-            <HeroExperience />
-          </div>
-        </figure>
+      {/* Content */}
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+        <h1 className="hero-headline shimmer-text text-5xl md:text-6xl lg:text-7xl font-bold font-[family-name:var(--font-space)] leading-tight">
+          {heroContent.headline}
+        </h1>
+        <p className="hero-subtext mt-6 text-lg md:text-xl text-[var(--color-text-muted)] max-w-2xl mx-auto">
+          {heroContent.subtext}
+        </p>
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#projects" className="hero-cta shimmer-button px-8 py-3 font-medium text-[var(--color-highlight)]">
+            {heroContent.cta1}
+          </a>
+          <a
+            href="#contact"
+            className="hero-cta metallic-border-btn px-8 py-3 font-medium text-[var(--color-accent-secondary)] transition-all duration-300"
+          >
+            {heroContent.cta2}
+          </a>
+        </div>
       </div>
     </section>
   );
 };
 
 export default Hero;
-
-function BackgroundSnowParticles() {
-  return (
-    <div className="absolute inset-0 z-0 pointer-events-none">
-      {Array.from({ length: 120 }).map((_, i) => (
-        <div key={i} className="snow"></div>
-      ))}
-    </div>
-  );
-}

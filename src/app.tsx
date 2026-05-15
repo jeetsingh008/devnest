@@ -1,24 +1,27 @@
 import NavBar from "./components/NavBar";
-import Contact from "./sections/Contact";
-// import Experience from "./sections/Experience";
-import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
-import TechstackShow from "./sections/TechstackShow";
-// import InfiniteTestimonials from "./sections/Testimonials";
+import Services from "./sections/Services";
+import Projects from "./sections/Projects";
+import Process from "./sections/Process";
+import About from "./sections/About";
+import Testimonials from "./sections/Testimonials";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
-const app = () => {
+const App = () => {
   return (
     <>
-      {/* <LogoShowcase /> */}
-      {/* <InfiniteTestimonials /> */}
-      {/* <Experience /> */}
       <NavBar />
       <Hero />
-      <TechstackShow />
+      <Services />
+      <Projects />
+      <Process />
+      <About />
+      <Testimonials />
       <Contact />
       <Footer />
     </>
   );
 };
 
-export default app;
+export default App;
